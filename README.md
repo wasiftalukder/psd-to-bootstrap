@@ -1,2 +1,2 @@
-# woodmart
-Woodmart Wordpress
+# psd-to-bootstrap
+PSD to Bootstrap
