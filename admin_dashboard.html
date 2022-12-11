@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./images/bootstrap-logo-shadow.png"
+      type="image/x-icon"
+    />
+    <!-- BS5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="custom.css" />
+
+   
+
+    <!-- BS5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Font Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <button
+        class="navbar-toggler ms-auto mb-2 bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#myNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3 col-xl-2 col-md-4 sidebar fixed-top">
+              <a
+                href="#"
+                class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border"
+                >WasifTalukder</a
+              >
+              <div class="bottom-border pb-3">
+                <img
+                  src="./images/admin.jpg"
+                  width="50px"
+                  class="rounded-circle me-3"
+                  alt=""
+                />
+                <a href="#" class="text-white plain">Wasif Zawad</a>
+              </div>
+              <ul class="navbar-nav flex-column mt-4">
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 current"
+                    ><i class="fa-solid fa-home fa-lg text-light me-3"></i
+                    >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-user fa-lg text-light me-3"></i
+                    >Profile</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-envelope fa-lg text-light me-3"></i
+                    >Inbox</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i
+                      class="fa-solid fa-shopping-cart fa-lg text-light me-3"
+                    ></i
+                    >Sales</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-chart-line fa-lg text-light me-3"></i
+                    >Analytics</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-chart-bar fa-lg text-light me-3"></i
+                    >Charts</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-table fa-lg text-light me-3"></i
+                    >Tables</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-wrench fa-lg text-light me-3"></i
+                    >Settings</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link text-white p-3 mb-2 sidebar-link"
+                    ><i class="fa-solid fa-file-alt fa-lg text-light me-3"></i
+                    >Documentation</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Sidebar end -->
+            <!-- Top Nav -->
+            <div
+              class="col-lg-9 col-xl-10 col-md-8 ms-auto bg-dark fixed-top py-2 top-navbar"
+            >
+              <div class="row align-items-center">
+                <div class="col-md-4">
+                  <h4 class="text-light text-uppercase mb-0">Dashboard</h4>
+                </div>
+                <div class="col-md-5">
+                  <form>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control search-input"
+                        placeholder="Search..."
+                      />
+                      <button type="button" class="btn btn-light search-btn">
+                        <i class="fa-solid fa-search text-danger"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-3">
+                  <ul class="navbar-nav">
+                    <li class="nav-item icon-parent">
+                      <a href="#" class="nav-link icon-bullet"
+                        ><i class="fa-solid fa-comments text-muted fa-lg"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item icon-parent">
+                      <a href="#" class="nav-link icon-bullet"
+                        ><i class="fa-solid fa-bell text-muted fa-lg"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item ms-md-auto">
+                      <a
+                        href="#"
+                        class="nav-link"
+                        data-bs-toggle="modal"
+                        data-bs-target="#signout"
+                        ><i
+                          class="fa-solid fa-sign-out-alt text-danger fa-lg"
+                        ></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Top Nav end -->
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="signout">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Want to leave?</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">Press logout to leave</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Stay here
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal end -->
+
+    <!-- Cards -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+            <div class="row pt-md-5 mt-3 mb-5">
+              <div class="col-xl-3 col-sm-6 p-2">
+                <div class="card card-common">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <i
+                        class="fa-solid fa-shopping-cart fa-3x text-warning"
+                      ></i>
+                      <div class="text-end text-secondary">
+                        <h5>Sales</h5>
+                        <h3>$135,000</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="fa-solid fa-sync me-3"></i>
+                    <span>Updated Now</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 p-2">
+                <div class="card card-common">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <i
+                        class="fa-solid fa-money-bill-alt fa-3x text-success"
+                      ></i>
+                      <div class="text-end text-secondary">
+                        <h5>Expenses</h5>
+                        <h3>$39,000</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="fa-solid fa-sync me-3"></i>
+                    <span>Updated Now</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 p-2">
+                <div class="card card-common">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <i class="fa-solid fa-users fa-3x text-info"></i>
+                      <div class="text-end text-secondary">
+                        <h5>Users</h5>
+                        <h3>15,000</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="fa-solid fa-sync me-3"></i>
+                    <span>Updated Now</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 p-2">
+                <div class="card card-common">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                      <i class="fa-solid fa-chart-line fa-3x text-danger"></i>
+                      <div class="text-end text-secondary">
+                        <h5>Visitors</h5>
+                        <h3>45,000</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer text-secondary">
+                    <i class="fa-solid fa-sync me-3"></i>
+                    <span>Updated Now</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cards end -->
+
+    <!-- table -->
+    <section>
+      <div class="container-fluid">
+        <div class="row mb-5">
+          <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-12">
+                <h3 class="text-muted text-center mb-3">Staff Salary</h3>
+                <table class="table bg-light text-center table-striped">
+                  <thead>
+                    <tr class="text-muted">
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Salary</th>
+                      <th>Date</th>
+                      <th>Contact</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>John</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <button type="button" class="btn btn-info btn-sm">
+                          Message
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Ann</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <button type="button" class="btn btn-info btn-sm">
+                          Message
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Mark</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <button type="button" class="btn btn-info btn-sm">
+                          Message
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Mary</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <button type="button" class="btn btn-info btn-sm">
+                          Message
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>Bob</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <button type="button" class="btn btn-info btn-sm">
+                          Message
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <!-- Pagination -->
+                <nav>
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3">
+                        <span>&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3 active"> 1 </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3"> 2 </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3"> 3 </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3">
+                        <span>&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- Pagination end -->
+              </div>
+              <div class="col-xl-6 col-12 mt-lg-4">
+                <h3 class="text-muted text-center mb-3">Recent Payments</h3>
+                <table class="table table-dark table-hover text-center">
+                  <thead>
+                    <tr class="text-muted">
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Date</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>Monica</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <span class="badge bg-success w-75 py-2">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>Nick</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <span class="badge bg-success w-75 py-2">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>Alex</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <span class="badge bg-danger w-75 py-2">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>Jane</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <span class="badge bg-danger w-75 py-2">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>Michael</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <span class="badge bg-success w-75 py-2">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>6</th>
+                      <td>kate</td>
+                      <td>$2000</td>
+                      <td>25/05/2018</td>
+                      <td>
+                        <span class="badge bg-danger w-75 py-2">Pending</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <!-- Pagination -->
+                <nav>
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3">
+                        <span>Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3 active"> 1 </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3"> 2 </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3"> 3 </a>
+                    </li>
+                    <li class="page-item">
+                      <a href="#" class="page-link py-2 px-3">
+                        <span>Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- Pagination end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- table end -->
+
+    <!-- Progress & Task List -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+            <div class="row mb-4 align-items-center">
+              <!-- Wasif's Progress bars -->
+              <div class="col-xl-6 col-12 mb-sm-5">
+                <div class="bg-dark text-white p-4 rounded">
+                  
+                  <!-- Title -->
+                  <h4 class="mb-5 text-center">Conversion Rates</h4>
+
+
+                  <h6 class="mb-3">Google Chrome</h6>
+                  <div class="progress mb-4" style="height: 20px">
+                    <div
+                      class="progress-bar progress-bar-striped fw-bold"
+                      style="width: 91%"
+                    >
+                      91%
+                    </div>
+                  </div>
+
+                  <h6 class="mb-3">Mozilla Firefox</h6>
+                  <div class="progress mb-4" style="height: 20px">
+                    <div
+                      class="progress-bar progress-bar-striped fw-bold bg-success"
+                      style="width: 82%"
+                    >
+                      82%
+                    </div>
+                  </div>
+
+                  <h6 class="mb-3">Safari</h6>
+                  <div class="progress mb-4" style="height: 20px">
+                    <div
+                      class="progress-bar progress-bar-striped fw-bold bg-danger"
+                      style="width: 67%"
+                    >
+                      67%
+                    </div>
+                  </div>
+
+                  <h6 class="mb-3">IE</h6>
+                  <div class="progress mb-4" style="height: 20px">
+                    <div
+                      class="progress-bar progress-bar-striped fw-bold"
+                      style="width: 10%"
+                    >
+                      10%
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- Wasif's Progress bars end -->
+              <!-- Wasif's Task List -->
+              <div class="col-xl-6 col-12">
+                  
+                                <!-- Title -->
+                                <h4 class="text-muted p-3 mb-3 mt-lg-4">Tasks</h4>
+                                
+                                <!-- Task -->
+                                <div class="container-fluid bg-white">
+                                  <div class="row py-3 mb-4 task-border align-items-center">
+                
+                                    <div class="col-1">
+                                      <input type="checkbox" checked />
+                                    </div>
+                
+                                    <div class="col-sm-9 col-8">
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                
+                                    <div class="col-1">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                        <i class="fa-solid fa-edit fa-lg text-success me-2"></i>
+                                      </a>
+                                  </div>
+                                  
+                                  <div class="col-1">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                      <i class="fa-solid fa-trash-alt fa-lg text-danger"></i>
+                                    </a>
+                                </div>
+  
+                                </div>
+                              </div>
+                              <!-- Task end -->
+                              <!-- Task -->
+                                <div class="container-fluid bg-white">
+                                  <div class="row py-3 mb-4 task-border align-items-center">
+                
+                                    <div class="col-1">
+                                      <input type="checkbox" checked />
+                                    </div>
+                
+                                    <div class="col-sm-9 col-8">
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                
+                                    <div class="col-1">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                        <i class="fa-solid fa-edit fa-lg text-success me-2"></i>
+                                      </a>
+                                  </div>
+                                  
+                                  <div class="col-1">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                      <i class="fa-solid fa-trash-alt fa-lg text-danger"></i>
+                                    </a>
+                                </div>
+  
+                                </div>
+                              </div>
+                              <!-- Task end -->
+                              <!-- Task -->
+                                <div class="container-fluid bg-white">
+                                  <div class="row py-3 mb-4 task-border align-items-center">
+                
+                                    <div class="col-1">
+                                      <input type="checkbox" checked />
+                                    </div>
+                
+                                    <div class="col-sm-9 col-8">
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                
+                                    <div class="col-1">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                        <i class="fa-solid fa-edit fa-lg text-success me-2"></i>
+                                      </a>
+                                  </div>
+                                  
+                                  <div class="col-1">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                      <i class="fa-solid fa-trash-alt fa-lg text-danger"></i>
+                                    </a>
+                                </div>
+  
+                                </div>
+                              </div>
+                              <!-- Task end -->
+                              <!-- Task -->
+                                <div class="container-fluid bg-white">
+                                  <div class="row py-3 mb-4 task-border align-items-center">
+                
+                                    <div class="col-1">
+                                      <input type="checkbox" checked />
+                                    </div>
+                
+                                    <div class="col-sm-9 col-8">
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                
+                                    <div class="col-1">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                        <i class="fa-solid fa-edit fa-lg text-success me-2"></i>
+                                      </a>
+                                  </div>
+                                  
+                                  <div class="col-1">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                      <i class="fa-solid fa-trash-alt fa-lg text-danger"></i>
+                                    </a>
+                                </div>
+  
+                                </div>
+                              </div>
+                              <!-- Task end -->
+                              <!-- Task -->
+                                <div class="container-fluid bg-white">
+                                  <div class="row py-3 mb-4 task-border align-items-center">
+                
+                                    <div class="col-1">
+                                      <input type="checkbox" checked />
+                                    </div>
+                
+                                    <div class="col-sm-9 col-8">
+                                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </div>
+                
+                                    <div class="col-1">
+                                      <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                        <i class="fa-solid fa-edit fa-lg text-success me-2"></i>
+                                      </a>
+                                  </div>
+                                  
+                                  <div class="col-1">
+                                    <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                      <i class="fa-solid fa-trash-alt fa-lg text-danger"></i>
+                                    </a>
+                                </div>
+  
+                                </div>
+                              </div>
+                              <!-- Task end -->
+              </div>
+              <!-- Wasif's Task List End -->
+            </div>
+        </div>
+      </div>
+    </section>
+    <!-- Progress & Task List end -->
+    
+    <!-- Activities & Quick Post -->
+    <section class="container-fluid">
+      <div class="row">
+        <!-- This is the available area right of the sidebar -->
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+          <div class="row align-items-center mb-5">
+            <!-- Activities -->
+            <div class="col-xl-7">
+              <!-- Title -->
+              <h4 class="text-muted mb-4">Recent Customer Activities</h4>
+              <!-- accordion start -->
+              <div class="accordion" id="accordionActivity">
+                <!-- accordion item 1 -->
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fullActivity1">
+                      <img class="me-3 rounded" width="50px" src="./images/cust1.jpeg" alt="">
+                      John posted a new comment
+                    </button>
+                  </div>
+                  <div id="fullActivity1" class="accordion-collapse collapse show" data-bs-parent="#accordionActivity" style="">
+                    <div class="accordion-body">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit et autem minima soluta placeat veniam reiciendis quae ad, voluptatibus iusto?
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion item 1 end -->
+
+                <!-- accordion item 2 -->
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fullActivity2">
+                      <img class="me-3 rounded" width="50px" src="./images/cust2.jpeg" alt="">
+                      Mark posted a new comment
+                    </button>
+                  </div>
+                  <div id="fullActivity2" class="accordion-collapse collapse" data-bs-parent="#accordionActivity" style="">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quidem laboriosam sint quae autem? Est neque voluptates amet porro. Praesentium.
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion item 2 end -->
+
+                <!-- accordion item 3 -->
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fullActivity3">
+                      <img class="me-3 rounded" width="50px" src="./images/cust3.jpeg" alt="">
+                      Monica posted a new comment
+                    </button>
+                  </div>
+                  <div id="fullActivity3" class="accordion-collapse collapse" data-bs-parent="#accordionActivity" style="">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quidem laboriosam sint quae autem? Est neque voluptates amet porro. Praesentium.
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion item 3 end -->
+
+                <!-- accordion item 4 -->
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fullActivity4">
+                      <img class="me-3 rounded" width="50px" src="./images/cust4.jpeg" alt="">
+                      Mark posted a new comment
+                    </button>
+                  </div>
+                  <div id="fullActivity4" class="accordion-collapse collapse" data-bs-parent="#accordionActivity" style="">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quidem laboriosam sint quae autem? Est neque voluptates amet porro. Praesentium.
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion item 4 end -->
+
+                <!-- accordion item 5 -->
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fullActivity5">
+                      <img class="me-3 rounded" width="50px" src="./images/cust5.jpeg" alt="">
+                      Mark posted a new comment
+                    </button>
+                  </div>
+                  <div id="fullActivity5" class="accordion-collapse collapse" data-bs-parent="#accordionActivity" style="">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quidem laboriosam sint quae autem? Est neque voluptates amet porro. Praesentium.
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion item 5 end -->
+
+                <!-- accordion item 6 -->
+                <div class="accordion-item">
+                  <div class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fullActivity6">
+                      <img class="me-3 rounded" width="50px" src="./images/cust6.jpeg" alt="">
+                      Mark posted a new comment
+                    </button>
+                  </div>
+                  <div id="fullActivity6" class="accordion-collapse collapse" data-bs-parent="#accordionActivity" style="">
+                    <div class="accordion-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quidem laboriosam sint quae autem? Est neque voluptates amet porro. Praesentium.
+                    </div>
+                  </div>
+                </div>
+                <!-- accordion item 6 end -->
+              </div>
+              <!-- accordion end -->
+            </div>
+            <!-- Activities end -->
+            <!-- Quick post -->
+            <div class="col-xl-5 mt-5">
+              <div class="card rounded">
+                <div class="card-body">
+                  <h5 class="text-muted text-center mb-4">Quick Status Post</h5>
+                  <!-- icons -->
+                  <ul class="list-inline text-center py-3">
+                    <!-- icon 1 -->
+                    <li class="list-inline-item me-4">
+                      <a href="#"><i class="fa-solid fa-pencil-alt text-success"></i></a>
+                      <span class="h6 text-muted">Status</span>
+                    </li>
+                    <!-- icon 1 end -->
+
+                    <!-- icon 2 -->
+                    <li class="list-inline-item me-4">
+                      <a href="#"><i class="fa-solid fa-camera text-info"></i></a>
+                      <span class="h6 text-muted">Photo</span>
+                    </li>
+                    <!-- icon 2 end -->
+
+                    <!-- icon 3 -->
+                    <li class="list-inline-item">
+                      <a href="#"><i class="fa-solid fa-map-marker-alt text-primary"></i></a>
+                      <span class="h6 text-muted">Check-in</span>
+                    </li>
+                    <!-- icon 3 end -->
+                    
+                  </ul>
+                  <!-- icons end -->
+
+                  <!-- Status type & post -->
+                  <form action="">
+                    <div class="form-group d-grid">
+                      <input type="text" class="form-control py-2 mb-3" placeholder="What's Your Status...">
+                      <button type="button" class="btn text-uppercase fw-bold btn-info text-light py-2 mb-5">Submit Post</button>
+                    </div>
+                  </form>
+                  <!-- Status type & post end -->
+
+                  <!-- Calendar & Clock -->
+                  <div class="row">
+                    <!-- Calendar -->
+                    <div class="col-6">
+                      <div class="card bg-light">
+                        <i class="fa-regular fa-calendar-alt fa-8x text-warning d-block mx-auto py-3"></i>
+                        <div class="card-body">
+                          <p class="card-text text-center fw-bold text-uppercase">Mon, May 26</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Calendar end -->
+                   
+                    <!-- Clock -->
+                    <div class="col-6">
+                      <div class="card bg-light">
+                        <i class="fa-regular fa-clock fa-8x text-danger d-block mx-auto py-3"></i>
+                        <div class="card-body">
+                          <p class="card-text text-center fw-bold text-uppercase">3:50 AM</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Clock end -->
+                    
+                  </div>
+                  <!-- Calendar & Clock end -->
+                </div>
+              </div>
+            </div>
+            <!-- Quick post end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Activities & Quick Post end -->
+
+    <!-- Footer -->
+    <footer class="container-fluid">
+      <div class="row">
+        <!-- Space to the right of sidenav  -->
+        <div class="col-xl-10 col-lg-9 col-md-8 ms-auto">
+          <div class="row border-top  pt-3">
+            <!-- Links -->
+            <div class="col-lg-6 text-center">
+              <ul class="list-inline">
+                <li class="list-inline-item me-2">
+                  <a class="text-dark text-decoration-none" href="#">WasifTalukder</a>
+                </li>
+                <li class="list-inline-item me-2">
+                  <a class="text-dark text-decoration-none" href="#">About</a>
+                </li>
+                <li class="list-inline-item me-2">
+                  <a class="text-dark text-decoration-none" href="#">Support</a>
+                </li>
+                <li class="list-inline-item me-2">
+                  <a class="text-dark text-decoration-none" href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Links end -->
+            <!-- Copyright -->
+            <div class="col-lg-6 text-center">
+              <p>&copy; 2022 Copyright. Made with <i class="fa-brands fa-bootstrap"></i> by <span class="text-success">Wasif</span></p>
+            </div>
+            <!-- Copyright end -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+ <!-- Custom JS -->
+ <script src="./script.js"></script>
+  </body>
+</html>
